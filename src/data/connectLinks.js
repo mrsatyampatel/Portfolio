@@ -39,7 +39,7 @@ const connectLinks = [
   },
   {
     name: "GeeksforGeeks",
-    url: "https://www.geeksforgeeks.org/user/heyypatel/",
+    url: "https://www.geeksforgeeks.org/profile/heyypatel",
     category: "Coding & Competitive Programming",
     iconKey: "geeksforgeeks",
   },
