@@ -214,14 +214,14 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.9, duration: 0.6 }}
                     >
-                        <Link
-                            to="/certificates/SIH_2025_Certificate_Satyam_Patel.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group px-7 py-3 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+                        <button
+                            type="button"
+                            onClick={() => alert("Resume will be uploaded soon!")}
+                            className="group px-7 py-3 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] cursor-pointer"
+                            title="Resume coming soon"
                         >
                             View Resume
-                        </Link>
+                        </button>
 
                         <Link
                             to="/connect"
