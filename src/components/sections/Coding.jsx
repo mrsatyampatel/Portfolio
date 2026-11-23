@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { SiLeetcode, SiGeeksforgeeks, SiGithub } from "react-icons/si";
 import { Code2, Flame, Trophy, ExternalLink, CheckCircle2, Zap, ArrowUpRight, BookOpen, Layers } from "lucide-react";
+import SubmissionHeatmap from "./SubmissionHeatmap";
 
 export default function Coding() {
   const [lcStats, setLcStats] = useState({
@@ -238,6 +239,9 @@ export default function Coding() {
             </motion.div>
 
           </div>
+
+          {/* ── Submission Activity Heatmap (GFG & LeetCode) ─────── */}
+          <SubmissionHeatmap />
 
           {/* ── DSA Roadmap / Focus Topics ──────────────────────── */}
           <div className="mt-8 mb-16">
