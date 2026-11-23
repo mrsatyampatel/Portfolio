@@ -87,6 +87,22 @@ export default function GitHubWall() {
     const [stats, setStats] = React.useState(initialStats);
 
     React.useEffect(() => {
+        // Fetch public repositories count
+        fetch('https://api.github.com/users/mrsatyampatel')
+            .then(res => res.json())
+            .then(userData => {
+                if (userData && userData.public_repos !== undefined) {
+                    setStats(prev => {
+                        const newStats = [...prev];
+                        newStats[0] = { ...newStats[0], value: `${userData.public_repos}+` };
+                        newStats[3] = { ...newStats[3], value: `${userData.public_repos}` };
+                        return newStats;
+                    });
+                }
+            })
+            .catch(() => {});
+
+        // Fetch total contributions
         fetch('https://github-contributions-api.jogruber.de/v4/mrsatyampatel')
             .then(res => res.json())
             .then(data => {

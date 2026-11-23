@@ -3,12 +3,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import projects from '../../data/projectsData';
-
-// Show only top 4 projects on homepage
-const homeProjects = projects.slice(0, 4);
+import useGitHubProjects from '../../data/useGitHubProjects';
 
 export default function HomeProjects() {
+  const { projects } = useGitHubProjects();
+  // Show top 4 projects on homepage
+  const homeProjects = projects.slice(0, 4);
+
   return (
     <section id="Projects" className="py-20 bg-black text-white">
       <div className="max-w-6xl mx-auto px-4">

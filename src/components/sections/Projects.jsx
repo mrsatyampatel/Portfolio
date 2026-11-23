@@ -5,9 +5,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { ArrowRight } from 'lucide-react';
-import projects from '../../data/projectsData';
+import useGitHubProjects from '../../data/useGitHubProjects';
 
 export default function Projects() {
+  const { projects } = useGitHubProjects();
   const projectsJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",

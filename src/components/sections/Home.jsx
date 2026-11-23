@@ -55,6 +55,28 @@ export default function Home() {
     }, []);
 
     React.useEffect(() => {
+        // 1. Live Public Repositories count from GitHub API
+        fetch('https://api.github.com/users/mrsatyampatel')
+            .then(res => res.json())
+            .then(userData => {
+                if (userData && userData.public_repos !== undefined) {
+                    setStats(prev => {
+                        const newStats = [...prev];
+                        newStats[0] = { value: `${userData.public_repos}+`, label: "Featured Projects" };
+                        newStats[1] = { value: `${topCertificates.length}+`, label: "Certifications & Hackathons" };
+                        return newStats;
+                    });
+                }
+            })
+            .catch(() => {
+                setStats(prev => {
+                    const newStats = [...prev];
+                    newStats[1] = { value: `${topCertificates.length}+`, label: "Certifications & Hackathons" };
+                    return newStats;
+                });
+            });
+
+        // 2. Live Total Contributions from GitHub
         fetch('https://github-contributions-api.jogruber.de/v4/mrsatyampatel')
             .then(res => res.json())
             .then(data => {
