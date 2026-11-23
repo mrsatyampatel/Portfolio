@@ -22,6 +22,7 @@ export default function MobileMenu({ menuOpen, setMenuOpen }) {
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
         <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
         <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+        <Link to="/coding" onClick={() => setMenuOpen(false)}>Coding</Link>
         <Link to="/certificates" onClick={() => setMenuOpen(false)}>Certificates</Link>
         <Link to="/connect" onClick={() => setMenuOpen(false)}>Connect</Link>
       </div>

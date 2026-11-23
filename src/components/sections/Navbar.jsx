@@ -29,10 +29,11 @@ function Navbar({ menuOpen, setMenuOpen }) {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-7">
             <Link to="/" className='text-gray-300 hover:text-white transition-colors'>Home</Link>
             <Link to="/about" className='text-gray-300 hover:text-white transition-colors'>About</Link>
             <Link to="/projects" className='text-gray-300 hover:text-white transition-colors'>Projects</Link>
+            <Link to="/coding" className='text-gray-300 hover:text-white transition-colors'>Coding</Link>
             <Link to="/certificates" className='text-gray-300 hover:text-white transition-colors'>Certificates</Link>
             <Link to="/connect" className='text-gray-300 hover:text-white transition-colors'>Connect</Link>
           </div>
