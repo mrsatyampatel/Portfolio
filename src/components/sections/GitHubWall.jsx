@@ -8,14 +8,26 @@ import 'react-activity-calendar/tooltips.css';
 
 /* ─── GitHub Stats Data ─────────────────────────────────────── */
 const initialStats = [
-    { label: "Public Repositories", value: "3+", icon: Book, color: "text-amber-400", link: "https://github.com/mrsatyampatel?tab=repositories" },
+    { label: "Public Repositories", value: "4+", icon: Book, color: "text-amber-400", link: "https://github.com/mrsatyampatel?tab=repositories" },
     { label: "Active Commits", value: "...", icon: GitCommit, color: "text-emerald-400", link: "https://github.com/mrsatyampatel" },
     { label: "Hackathons", value: "3+", icon: Trophy, color: "text-blue-400", link: "/certificates" },
-    { label: "Featured Projects", value: "3", icon: Rocket, color: "text-purple-400", link: "/projects" },
+    { label: "Featured Projects", value: "4", icon: Rocket, color: "text-purple-400", link: "/projects" },
 ];
 
 /* ─── Featured Repositories ─────────────────────────────────── */
 const orgs = [
+    { 
+        name: "Developer Portfolio", 
+        repo: "mrsatyampatel/Portfolio", 
+        desc: "React & Tailwind Portfolio", 
+        title: "Modern responsive portfolio with live GitHub wall, certificates showcase & dark mode", 
+        icon: SiReact, 
+        color: "#61DAFB", 
+        actionIcon: Rocket, 
+        actionColor: "text-blue-400", 
+        link: "https://github.com/mrsatyampatel/Portfolio", 
+        badge: "Portfolio" 
+    },
     { 
         name: "Alumni Connect SIH '25", 
         repo: "mrsatyampatel/alumniconnectsih25-satyam", 
