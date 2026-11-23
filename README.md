@@ -7,6 +7,9 @@
     <strong>Frontend Developer · MERN Stack Enthusiast · Interested in Machine Learning</strong>
     <br />
     <br />
+    <a href="https://portfolio-three-chi-4cr5my1lrc.vercel.app"><strong>🌐 View Live Portfolio »</strong></a>
+    <br />
+    <br />
     <a href="https://github.com/mrsatyampatel">GitHub Profile</a>
     ·
     <a href="https://www.linkedin.com/in/satyam-patel-221a69370">LinkedIn</a>
