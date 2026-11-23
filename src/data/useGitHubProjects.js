@@ -85,8 +85,22 @@ export function useGitHubProjects() {
             };
           });
 
-          if (isMounted && formatted.length > 0) {
-            setProjects(formatted);
+          // 3. MERGE curated defaultProjects with newly discovered GitHub repositories
+          const merged = [...defaultProjects];
+
+          formatted.forEach((ghProj) => {
+            const alreadyExists = merged.some(
+              (p) =>
+                (p.github && ghProj.github && p.github.toLowerCase() === ghProj.github.toLowerCase()) ||
+                p.title.toLowerCase() === ghProj.title.toLowerCase()
+            );
+            if (!alreadyExists) {
+              merged.push(ghProj);
+            }
+          });
+
+          if (isMounted && merged.length > 0) {
+            setProjects(merged);
           }
         }
       } catch (err) {
