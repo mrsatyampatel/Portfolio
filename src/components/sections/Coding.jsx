@@ -89,142 +89,142 @@ export default function Coding() {
             </motion.p>
           </div>
 
-          {/* ── Platform Profiles: Stacked Vertically (Upar - Niche) ── */}
-          <div className="flex flex-col gap-8 mb-12">
+          {/* ── Platform Profiles Grid (Side-by-Side) ────────────────── */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             
-            {/* 1. LEETCODE CARD (UPAR) */}
+            {/* 1. LEETCODE CARD */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group relative rounded-3xl p-7 sm:p-8 bg-white/[0.02] border border-amber-500/25 hover:border-amber-500/50 hover:bg-white/[0.04] transition-all duration-300 backdrop-blur-md shadow-[0_0_20px_rgba(245,158,11,0.05)] hover:shadow-[0_0_30px_rgba(245,158,11,0.15)]"
+              className="group relative rounded-3xl p-7 bg-white/[0.02] border border-amber-500/25 hover:border-amber-500/50 hover:bg-white/[0.04] transition-all duration-300 backdrop-blur-md shadow-[0_0_20px_rgba(245,158,11,0.05)] hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] flex flex-col justify-between"
             >
-              {/* Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-13 h-13 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-[#FFA116] p-2.5">
-                    <SiLeetcode size={30} />
+              <div>
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-[#FFA116] p-2">
+                      <SiLeetcode size={26} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">LeetCode</h3>
+                      <p className="text-xs text-gray-400 font-mono">@heyypatel</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">LeetCode Profile</h3>
-                    <p className="text-sm text-gray-400 font-mono">@heyypatel</p>
-                  </div>
-                </div>
 
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/30">
-                    <Flame size={14} className="text-amber-400 animate-pulse" />
-                    Active Problem Solver
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/30">
+                    <Flame size={13} className="text-amber-400 animate-pulse" />
+                    Active Solver
                   </span>
-                  
-                  <a
-                    href="https://leetcode.com/u/heyypatel/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 py-2 px-4 rounded-full bg-amber-500/10 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs transition-all duration-200 border border-amber-500/30 hover:border-transparent"
-                  >
-                    <span>View Profile</span>
-                    <ArrowUpRight size={14} />
-                  </a>
                 </div>
+
+                {/* Stat Highlights Grid */}
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                  <div className="p-3.5 rounded-2xl bg-black/40 border border-white/5 text-center">
+                    <p className="text-xs text-gray-400 mb-1">Easy</p>
+                    <p className="text-lg font-bold text-emerald-400">{lcStats.easySolved !== "--" ? lcStats.easySolved : "Solved"}</p>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-black/40 border border-white/5 text-center">
+                    <p className="text-xs text-gray-400 mb-1">Medium</p>
+                    <p className="text-lg font-bold text-amber-400">{lcStats.mediumSolved !== "--" ? lcStats.mediumSolved : "Practicing"}</p>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-black/40 border border-white/5 text-center">
+                    <p className="text-xs text-gray-400 mb-1">Hard</p>
+                    <p className="text-lg font-bold text-rose-400">{lcStats.hardSolved !== "--" ? lcStats.hardSolved : "Target"}</p>
+                  </div>
+                </div>
+
+                {/* Focus points */}
+                <ul className="space-y-2.5 text-xs sm:text-sm text-gray-300 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-amber-400 shrink-0" />
+                    <span>Pattern-based problem solving</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-amber-400 shrink-0" />
+                    <span>Top Interview 150 Roadmap</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-amber-400 shrink-0" />
+                    <span>Python, Java & C Implementations</span>
+                  </li>
+                </ul>
               </div>
 
-              {/* Stat Highlights Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                <div className="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
-                  <p className="text-xs text-gray-400 mb-1">Easy Problems</p>
-                  <p className="text-xl font-bold text-emerald-400">{lcStats.easySolved !== "--" ? lcStats.easySolved : "Solved"}</p>
-                </div>
-                <div className="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
-                  <p className="text-xs text-gray-400 mb-1">Medium Problems</p>
-                  <p className="text-xl font-bold text-amber-400">{lcStats.mediumSolved !== "--" ? lcStats.mediumSolved : "Practicing"}</p>
-                </div>
-                <div className="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
-                  <p className="text-xs text-gray-400 mb-1">Hard Problems</p>
-                  <p className="text-xl font-bold text-rose-400">{lcStats.hardSolved !== "--" ? lcStats.hardSolved : "Targeting"}</p>
-                </div>
-              </div>
-
-              {/* Focus points */}
-              <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-300 pt-2 border-t border-white/5">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-amber-400 shrink-0" />
-                  <span>Pattern-based problem solving</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-amber-400 shrink-0" />
-                  <span>Top Interview 150 Roadmap</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-amber-400 shrink-0" />
-                  <span>Python, Java & C Implementations</span>
-                </li>
-              </ul>
+              {/* Action Button */}
+              <a
+                href="https://leetcode.com/u/heyypatel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-amber-500/10 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-sm transition-all duration-300 border border-amber-500/30 hover:border-transparent group/btn"
+              >
+                <span>Open LeetCode Profile</span>
+                <ArrowUpRight size={16} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+              </a>
             </motion.div>
 
-            {/* 2. GEEKSFORGEEKS CARD (NICHE) */}
+            {/* 2. GEEKSFORGEEKS CARD */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="group relative rounded-3xl p-7 sm:p-8 bg-white/[0.02] border border-emerald-500/25 hover:border-emerald-500/50 hover:bg-white/[0.04] transition-all duration-300 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.05)] hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]"
+              className="group relative rounded-3xl p-7 bg-white/[0.02] border border-emerald-500/25 hover:border-emerald-500/50 hover:bg-white/[0.04] transition-all duration-300 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.05)] hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] flex flex-col justify-between"
             >
-              {/* Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-13 h-13 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-[#2F8D46] p-2.5">
-                    <SiGeeksforgeeks size={30} />
+              <div>
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-[#2F8D46] p-2">
+                      <SiGeeksforgeeks size={26} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">GeeksforGeeks</h3>
+                      <p className="text-xs text-gray-400 font-mono">@heyypatel</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">GeeksforGeeks Profile</h3>
-                    <p className="text-sm text-gray-400 font-mono">@heyypatel</p>
-                  </div>
-                </div>
 
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
-                    <Trophy size={14} className="text-emerald-400" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+                    <Trophy size={13} className="text-emerald-400" />
                     SRMU Leaderboard
                   </span>
-                  
-                  <a
-                    href="https://www.geeksforgeeks.org/profile/heyypatel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 py-2 px-4 rounded-full bg-emerald-500/10 hover:bg-emerald-500 text-emerald-300 hover:text-black font-semibold text-xs transition-all duration-200 border border-emerald-500/30 hover:border-transparent"
-                  >
-                    <span>View Profile</span>
-                    <ArrowUpRight size={14} />
-                  </a>
                 </div>
+
+                {/* Institution Box */}
+                <div className="p-4 rounded-2xl bg-black/40 border border-white/5 mb-6">
+                  <p className="text-xs text-emerald-400 font-semibold uppercase tracking-wider mb-1">Campus Practice</p>
+                  <p className="text-sm font-bold text-white">Shri Ramswaroop Memorial University (SRMU)</p>
+                  <p className="text-xs text-gray-400 mt-1">Practicing DSA problems & university POTD</p>
+                </div>
+
+                {/* Focus points */}
+                <ul className="space-y-2.5 text-xs sm:text-sm text-gray-300 mb-6">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+                    <span>Core Data Structures practice</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+                    <span>Company-specific interview sets</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+                    <span>POTD & Algorithmic Articles</span>
+                  </li>
+                </ul>
               </div>
 
-              {/* Institution Box */}
-              <div className="p-4 rounded-2xl bg-black/40 border border-white/5 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div>
-                  <p className="text-xs text-emerald-400 font-semibold uppercase tracking-wider mb-0.5">Campus Practice</p>
-                  <p className="text-base font-bold text-white">Shri Ramswaroop Memorial University (SRMU)</p>
-                </div>
-                <span className="text-xs text-gray-400 font-mono">Department of Computer Science & Engineering</span>
-              </div>
-
-              {/* Focus points */}
-              <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-300 pt-2 border-t border-white/5">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span>Core Data Structures practice</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span>Company-specific interview sets</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span>POTD & Algorithmic Articles</span>
-                </li>
-              </ul>
+              {/* Action Button */}
+              <a
+                href="https://www.geeksforgeeks.org/profile/heyypatel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-emerald-500/10 hover:bg-emerald-500 text-emerald-300 hover:text-black font-semibold text-sm transition-all duration-300 border border-emerald-500/30 hover:border-transparent group/btn"
+              >
+                <span>Open GeeksforGeeks Profile</span>
+                <ArrowUpRight size={16} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+              </a>
             </motion.div>
 
           </div>
