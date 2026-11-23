@@ -2,31 +2,8 @@ import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Trophy, Sparkles, Award, ArrowUpRight, ArrowRight, Calendar, BookmarkCheck, CheckCircle2 } from "lucide-react";
+import { Trophy, Sparkles, Award, ArrowUpRight, ArrowRight, Calendar, BookmarkCheck } from "lucide-react";
 import achievements from "../../data/achievementsData";
-
-const badgeStyles = {
-  blue: {
-    tag: "bg-blue-500/10 text-blue-400 border-blue-500/30",
-    glow: "group-hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]",
-    accent: "text-blue-400",
-  },
-  purple: {
-    tag: "bg-purple-500/10 text-purple-400 border-purple-500/30",
-    glow: "group-hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]",
-    accent: "text-purple-400",
-  },
-  amber: {
-    tag: "bg-amber-500/10 text-amber-300 border-amber-500/30",
-    glow: "group-hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)]",
-    accent: "text-amber-300",
-  },
-  emerald: {
-    tag: "bg-emerald-500/10 text-emerald-300 border-emerald-500/30",
-    glow: "group-hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]",
-    accent: "text-emerald-300",
-  },
-};
 
 export default function Achievements() {
   return (
@@ -67,88 +44,82 @@ export default function Achievements() {
           </motion.p>
         </div>
 
-        {/* Achievements Grid */}
+        {/* Achievements Grid: Minimalist, Unified Dark Theme */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {achievements.map((item, index) => {
-            const theme = badgeStyles[item.badgeTheme] || badgeStyles.blue;
-            return (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className={`group relative rounded-2xl p-6 sm:p-7 bg-white/[0.02] border border-white/10 ${theme.glow} hover:bg-white/[0.04] transition-all duration-300 backdrop-blur-sm flex flex-col justify-between`}
-              >
-                <div>
-                  {/* Top Bar: Category & Date */}
-                  <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
-                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${theme.tag}`}>
-                      <Sparkles size={12} />
-                      {item.highlight}
-                    </span>
-
-                    <span className="inline-flex items-center gap-1 text-xs text-gray-400 font-mono">
-                      <Calendar size={12} />
-                      {item.date}
-                    </span>
-                  </div>
-
-                  {/* Title & Role */}
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 mb-1">
-                    {item.title}
-                  </h3>
-
-                  <p className={`text-sm font-semibold mb-2 ${theme.accent}`}>
-                    {item.role}
-                  </p>
-
-                  <p className="text-xs text-gray-400 font-medium mb-3">
-                    {item.organization}
-                  </p>
-
-                  {/* Prominent Eye-Catching Highlight Badges */}
-                  {item.keyPoints && item.keyPoints.length > 0 && (
-                    <div className="mt-4 mb-2 space-y-2.5">
-                      {item.keyPoints.map((kp, idx) => (
-                        <div
-                          key={idx}
-                          className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md transition-transform duration-200 group-hover:scale-[1.01] ${kp.badgeClass}`}
-                        >
-                          <span className="relative flex h-2 w-2 shrink-0">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-current opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-current"></span>
-                          </span>
-                          <span>{kp.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Footer link to certificate */}
-                <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-xs text-gray-500 font-medium flex items-center gap-1.5">
-                    <BookmarkCheck size={14} className="text-blue-400" />
-                    {item.category}
+          {achievements.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="group relative rounded-2xl p-6 sm:p-7 bg-white/[0.02] border border-white/10 hover:border-blue-500/30 hover:bg-white/[0.035] transition-all duration-300 backdrop-blur-sm flex flex-col justify-between shadow-lg hover:shadow-blue-500/5"
+            >
+              <div>
+                {/* Top Bar: Minimal Badge & Date */}
+                <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border border-white/10 bg-white/[0.03] text-gray-300">
+                    <Sparkles size={12} className="text-blue-400" />
+                    {item.highlight}
                   </span>
 
-                  {item.certificateUrl && (
-                    <a
-                      href={item.certificateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 font-medium transition-colors group-hover:underline"
-                    >
-                      <Award size={14} />
-                      Verify Certificate
-                      <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </a>
-                  )}
+                  <span className="inline-flex items-center gap-1 text-xs text-gray-400 font-mono">
+                    <Calendar size={12} />
+                    {item.date}
+                  </span>
                 </div>
-              </motion.div>
-            );
-          })}
+
+                {/* Title & Role */}
+                <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 mb-1">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm font-semibold text-blue-400 mb-1">
+                  {item.role}
+                </p>
+
+                <p className="text-xs text-gray-400 font-medium mb-4">
+                  {item.organization}
+                </p>
+
+                {/* Sleek Minimal Highlight Callouts */}
+                {item.keyPoints && item.keyPoints.length > 0 && (
+                  <div className="mt-4 mb-2 space-y-2.5">
+                    {item.keyPoints.map((kp, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all text-xs sm:text-sm font-medium text-gray-200"
+                      >
+                        <span className="h-2 w-2 rounded-full bg-blue-400 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
+                        <span>{kp.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Footer: Category & Verify Link */}
+              <div className="pt-4 border-t border-white/5 flex items-center justify-between mt-4">
+                <span className="text-xs text-gray-400 font-medium flex items-center gap-1.5">
+                  <BookmarkCheck size={14} className="text-blue-400" />
+                  {item.category}
+                </span>
+
+                {item.certificateUrl && (
+                  <a
+                    href={item.certificateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 font-medium transition-colors group-hover:underline"
+                  >
+                    <Award size={14} />
+                    Verify Certificate
+                    <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Bottom CTA to view all certificates */}
