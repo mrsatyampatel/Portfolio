@@ -24,6 +24,12 @@ const connectLinks = [
     iconKey: "linkedin",
   },
   {
+    name: "X (Twitter)",
+    url: "https://x.com/_heyypatel",
+    category: "Primary",
+    iconKey: "x",
+  },
+  {
     name: "Email",
     url: "mailto:patelsatyam1735@gmail.com",
     category: "Primary",

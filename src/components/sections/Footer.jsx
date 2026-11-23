@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -46,6 +47,16 @@ export default function Footer() {
             className="hover:text-white transition"
           >
             <FaLinkedin aria-hidden="true" />
+          </a>
+
+          <a
+            href="https://x.com/_heyypatel"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Satyam Patel's X (Twitter) profile"
+            className="hover:text-white transition"
+          >
+            <FaXTwitter aria-hidden="true" />
           </a>
 
           <a

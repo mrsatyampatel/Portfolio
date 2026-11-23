@@ -24,6 +24,7 @@ import {
   SiLinktree,
   SiYcombinator,
   SiIndiehackers,
+  SiX,
 } from "react-icons/si";
 import { FaEnvelope } from "react-icons/fa";
 
@@ -34,6 +35,7 @@ const ICON_MAP = {
   portfolio: { Icon: Globe, color: "#3B82F6" },
   github: { Icon: SiGithub, color: "#ffffff" },
   linkedin: { Icon: SiLinkedin, color: "#0A66C2" },
+  x: { Icon: SiX, color: "#ffffff" },
   email: { Icon: FaEnvelope, color: "#EA4335" },
   resume: { Icon: FileText, color: "#10B981" },
   geeksforgeeks: { Icon: SiGeeksforgeeks, color: "#2F8D46" },

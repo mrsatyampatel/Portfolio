@@ -14,6 +14,8 @@
     ·
     <a href="https://www.linkedin.com/in/satyam-patel-221a69370">LinkedIn</a>
     ·
+    <a href="https://x.com/_heyypatel">X (Twitter)</a>
+    ·
     <a href="https://leetcode.com/u/heyypatel/">LeetCode</a>
     ·
     <a href="https://www.geeksforgeeks.org/profile/heyypatel">GeeksforGeeks</a>
