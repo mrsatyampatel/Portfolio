@@ -8,6 +8,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ArrowUpRight, ArrowRight, Award, MessageSquare } from 'lucide-react';
 import HomeProjects from './HomeProjects';
+import Achievements from './Achievements';
 import GitHubWall from './GitHubWall';
 
 /* ─── Stats data ────────────────────────────────────────────── */
@@ -342,6 +343,9 @@ export default function Home() {
 
             {/* ═══════════════ PROJECTS TEASER ═══════════════ */}
             <HomeProjects />
+
+            {/* ═══════════════ KEY ACHIEVEMENTS ═══════════════ */}
+            <Achievements />
 
             {/* ═══════════════ CERTIFICATES TEASER ═══════════════ */}
             <section className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
