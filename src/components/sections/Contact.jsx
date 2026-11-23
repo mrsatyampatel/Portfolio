@@ -13,7 +13,7 @@ export default function Contact() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "939a21c5-9f79-4614-996d-f36616e88e40"); //Web3Forms API key
+    formData.append("access_key", "28cea9de-7e82-4166-bfb6-ac711ae81b23"); // Satyam Patel Web3Forms API key
     formData.append("subject", "New message from your portfolio contact form");
 
     const object = Object.fromEntries(formData);
