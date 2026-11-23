@@ -31,7 +31,7 @@ const connectLinks = [
   },
   {
     name: "Email",
-    url: "mailto:patelsatyam1735@gmail.com",
+    url: "mailto:chandrayan2k23@gmail.com",
     category: "Primary",
     iconKey: "email",
   },

@@ -73,13 +73,29 @@ export default function Contact() {
         </motion.h2>
 
         <motion.p
-          className="text-gray-300 mb-10 max-w-xl mx-auto"
+          className="text-gray-300 mb-6 max-w-xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           Want to work together, collaborate on a project, or just say hi? Drop a message below!
         </motion.p>
+
+        {/* Direct Email Badge */}
+        <motion.div
+          className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <span className="text-gray-400">Direct Email:</span>
+          <a
+            href="mailto:chandrayan2k23@gmail.com"
+            className="text-blue-400 hover:text-blue-300 font-mono font-medium hover:underline transition"
+          >
+            chandrayan2k23@gmail.com
+          </a>
+        </motion.div>
 
         {/* Show message after form submission */}
         {message && (
