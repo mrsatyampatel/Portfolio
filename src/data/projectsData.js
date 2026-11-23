@@ -5,7 +5,7 @@ const projects = [
     description: 'A responsive, modern, performance-driven personal developer portfolio built with React, Vite, and Tailwind CSS. Features glassmorphism UI, live GitHub contributions, interactive certificate showcase, and full SEO optimization.',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
     github: 'https://github.com/mrsatyampatel/Portfolio',
-    live: 'https://portfolio-three-chi-4cr5my1lrc.vercel.app',
+    live: 'https://satyamportfolio-piii.vercel.app',
   },
   {
     title: 'Alumni Connect (SIH 2025)',
