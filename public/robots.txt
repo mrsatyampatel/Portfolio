@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Identity: Satyam Patel
+# GitHub: https://github.com/mrsatyampatel

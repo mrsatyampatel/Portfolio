@@ -1,0 +1,18 @@
+# Satyam Patel - Portfolio
+
+> Official developer portfolio of Satyam Patel, Frontend Developer and Second-Year B.Tech CSE (AI/ML) student at Shri Ramswaroop Memorial University (SRMU), Lucknow, India.
+
+Passionate about frontend development, MERN stack, Data Structures & Algorithms (DSA), and Machine Learning. Actively building projects and participating in hackathons like Smart India Hackathon (SIH 2025).
+
+## Profile
+
+- [Home](/): Main portfolio landing page
+- [About](/about): Background, education (SRMU B.Tech CSE AI/ML), and complete tech stack
+- [Projects](/projects): Full collection of projects (Alumni Connect SIH 2025, Gas Alert System, Mangifera Shield)
+- [Certificates](/certificates): SIH 2025, MLH Hackfest, Craftora, and SRMU Techfest certificates
+- [Contact](/contact): Get in touch via the contact form
+- [All Links / Connect Hub](/connect): GitHub, LinkedIn, LeetCode, and email
+- [GitHub](https://github.com/mrsatyampatel): Project repositories and code
+- [LinkedIn](https://www.linkedin.com/in/satyam-patel-221a69370): Professional LinkedIn profile
+- [LeetCode](https://leetcode.com/u/heyypatel/): Coding profile
+- [Email](mailto:patelsatyam1735@gmail.com): Direct contact
