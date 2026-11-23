@@ -37,6 +37,12 @@ const connectLinks = [
     category: "Coding & Competitive Programming",
     iconKey: "leetcode",
   },
+  {
+    name: "GeeksforGeeks",
+    url: "https://www.geeksforgeeks.org/user/heyypatel/",
+    category: "Coding & Competitive Programming",
+    iconKey: "geeksforgeeks",
+  },
 ];
 
 export const categoryOrder = [
