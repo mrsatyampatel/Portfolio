@@ -82,15 +82,15 @@ export default function Achievements() {
                   {item.organization}
                 </p>
 
-                {/* Sleek Minimal Highlight Callouts */}
+                {/* Sleek Amber / Golden Highlight Callouts */}
                 {item.keyPoints && item.keyPoints.length > 0 && (
                   <div className="mt-4 mb-2 space-y-2.5">
                     {item.keyPoints.map((kp, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all text-xs sm:text-sm font-medium text-gray-200"
+                        className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/15 hover:border-amber-500/50 transition-all text-xs sm:text-sm font-semibold text-amber-300 shadow-[0_0_12px_rgba(245,158,11,0.08)]"
                       >
-                        <span className="h-2 w-2 rounded-full bg-blue-400 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
+                        <span className="h-2 w-2 rounded-full bg-amber-400 shrink-0 shadow-[0_0_8px_rgba(245,158,11,0.8)]" />
                         <span>{kp.label}</span>
                       </div>
                     ))}
