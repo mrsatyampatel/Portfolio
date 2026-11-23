@@ -2,28 +2,28 @@ import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Trophy, Sparkles, Award, ArrowUpRight, ArrowRight, Calendar, BookmarkCheck } from "lucide-react";
+import { Trophy, Sparkles, Award, ArrowUpRight, ArrowRight, Calendar, BookmarkCheck, CheckCircle2 } from "lucide-react";
 import achievements from "../../data/achievementsData";
 
 const badgeStyles = {
   blue: {
     tag: "bg-blue-500/10 text-blue-400 border-blue-500/30",
-    glow: "group-hover:border-blue-500/40",
+    glow: "group-hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]",
     accent: "text-blue-400",
   },
   purple: {
     tag: "bg-purple-500/10 text-purple-400 border-purple-500/30",
-    glow: "group-hover:border-purple-500/40",
+    glow: "group-hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]",
     accent: "text-purple-400",
   },
   amber: {
     tag: "bg-amber-500/10 text-amber-300 border-amber-500/30",
-    glow: "group-hover:border-amber-500/40",
+    glow: "group-hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)]",
     accent: "text-amber-300",
   },
   emerald: {
     tag: "bg-emerald-500/10 text-emerald-300 border-emerald-500/30",
-    glow: "group-hover:border-emerald-500/40",
+    glow: "group-hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]",
     accent: "text-emerald-300",
   },
 };
@@ -63,7 +63,7 @@ export default function Achievements() {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            National hackathons, research conference presentation, and technical event leadership.
+            National hackathons, research conference presentation, and technical leadership.
           </motion.p>
         </div>
 
@@ -106,6 +106,24 @@ export default function Achievements() {
                   <p className="text-xs text-gray-400 font-medium mb-3">
                     {item.organization}
                   </p>
+
+                  {/* Prominent Eye-Catching Highlight Badges */}
+                  {item.keyPoints && item.keyPoints.length > 0 && (
+                    <div className="my-4 space-y-2">
+                      {item.keyPoints.map((kp, idx) => (
+                        <div
+                          key={idx}
+                          className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md transition-transform duration-200 group-hover:scale-[1.01] ${kp.badgeClass}`}
+                        >
+                          <span className="relative flex h-2 w-2 shrink-0">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-current opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-current"></span>
+                          </span>
+                          <span>{kp.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
                   {/* Description */}
                   <p className="text-sm text-gray-300 leading-relaxed mb-6">
