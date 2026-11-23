@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { X, Download, ChevronLeft, ChevronRight, ArrowRight, Award, MapPin, Calendar, Building2, Sparkles, CheckCircle2 } from "lucide-react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
@@ -85,32 +85,34 @@ const certificates = [
     alt: "Hackfest 2026 Participation Certificate - Craftora & OSEN - Satyam Patel",
     description: "Awarded Certificate of Participation in Hackfest 2026 in recognition of dedication, creative teamwork, and technical contributions utilizing modern cloud & AI developer tools.",
   },
-  {
-    id: 8,
-    title: "Viveka 5.0 (Boat Race)",
-    organization: "Tech Fusion Club, SRMU",
-    location: "SRMU Campus, Lucknow-Deva Road, Barabanki, U.P.",
-    date: "18th – 20th February, 2026",
-    highlight: "Technical Event Competition",
-    img: "/certificates/Viveka_5_Boat_Race_Certificate.pdf",
-    alt: "Viveka 5.0 Techfest Participation Certificate - Satyam Patel",
-    description: "Certificate of Participation in the Boat Race technical design competition at VIVEKA: The Intelligence 5.0 (Techfest 2k26) organized by Tech Fusion Club, SRMU.",
-  },
+
   {
     id: 9,
     title: "Harmony'26 Technical Events",
     organization: "Tech Fusion Club, SRMU",
     location: "SRMU Campus, Lucknow-Deva Road, Barabanki, U.P.",
-    date: "2026",
+    date: "9th October, 2026",
     highlight: "Event Management Volunteer",
-    img: "/certificates/Harmony_26_Volunteer_Certificate.pdf",
+    img: "/certificates/Harmony_26_Volunteer.jpg",
+    pdfUrl: "/certificates/Harmony_26_Volunteer_Certificate.pdf",
     alt: "Harmony'26 Event Volunteer Appreciation Certificate - Satyam Patel",
-    description: "Certificate of Appreciation proudly presented to Satyam Patel for serving as an Event Volunteer in HARMONY'26 Technical Events, assisting in event operations, logistics, and student coordination.",
+    description: "Certificate of Appreciation proudly presented to Satyam Patel for serving as an Event Volunteer in HARMONY'26 Technical Events, organized by Tech Fusion Club, SRMU on 9th October, 2026.",
   },
 ];
 
 export default function CertificateSection() {
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const modalContentRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
+  useEffect(() => {
+    if (selectedIndex !== null && modalContentRef.current) {
+      modalContentRef.current.scrollTop = 0;
+    }
+  }, [selectedIndex]);
 
   const openModal = (index) => setSelectedIndex(index);
   const closeModal = () => setSelectedIndex(null);
@@ -313,6 +315,7 @@ export default function CertificateSection() {
                 exit={{ opacity: 0 }}
               >
                 <motion.div
+                  ref={modalContentRef}
                   className="relative w-full max-w-5xl max-h-[95vh] overflow-y-auto overflow-x-hidden bg-white text-black rounded-2xl shadow-2xl p-4 sm:p-6 flex flex-col items-center"
                   initial={{ scale: 0.9 }}
                   animate={{ scale: 1 }}

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FaReact, FaGithub, FaJsSquare, FaPython, FaJava, FaGitAlt, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb, SiNumpy, SiPandas, SiC } from 'react-icons/si';
-import { ArrowRight, Brain, Cpu, Database } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Database, GraduationCap, BookOpen, Calendar, School, Medal, Sparkles, Trophy, Target, Award } from 'lucide-react';
 
 export default function About() {
   const aboutJsonLd = {
@@ -66,6 +66,194 @@ export default function About() {
               Currently learning <span className="text-white font-medium">Data Structures & Algorithms (DSA)</span> and the fundamentals of <span className="text-white font-medium">Machine Learning</span>. Actively involved in web development projects, and always eager to learn, explore, and grow in the field of ML and technology.
             </p>
           </motion.div>
+
+          {/* ── Education & Academics Container (3 Cards) ──────── */}
+          <div className="w-full max-w-6xl mx-auto mb-16 text-left grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* 1. Higher Education (B.Tech) */}
+            <motion.div
+              className="p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-sm shadow-lg flex flex-col justify-between"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                    <GraduationCap size={22} />
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-white/[0.04] text-gray-300 border border-white/10">
+                    <Calendar size={13} className="text-blue-400" />
+                    2025 – 2029
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-white flex items-center gap-2 flex-wrap mb-1">
+                  <span>B.Tech in CSE</span>
+                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 font-semibold">
+                    AI & ML
+                  </span>
+                </h3>
+
+                <p className="text-xs text-gray-400 mb-5">
+                  Shri Ramswaroop Memorial University (SRMU), Lucknow
+                </p>
+
+                <div className="pt-4 border-t border-white/5">
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                    <BookOpen size={14} className="text-blue-400" />
+                    Key Coursework:
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      "Data Structures & Algorithms",
+                      "OOPs (Java, C)",
+                      "Python",
+                      "ML Fundamentals",
+                      "DBMS",
+                    ].map((course) => (
+                      <span
+                        key={course}
+                        className="px-2.5 py-1 rounded-lg text-xs font-medium bg-white/[0.03] text-gray-300 border border-white/10 hover:border-blue-500/30 transition-colors"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 2. Schooling Foundations (JNV Basti) */}
+            <motion.div
+              className="p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-500/30 transition-all duration-300 backdrop-blur-sm shadow-lg flex flex-col justify-between"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                    <School size={22} />
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-white/[0.04] text-gray-300 border border-white/10">
+                    <Calendar size={13} className="text-amber-400" />
+                    Class X & XII
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-white mb-1 flex items-center gap-2 flex-wrap">
+                  <span>Jawahar Navodaya Vidyalaya (JNV)</span>
+                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold font-mono">
+                    CBSE
+                  </span>
+                </h3>
+
+                <p className="text-xs text-gray-400 mb-5">
+                  Basti, Uttar Pradesh • Central Board of Secondary Education (CBSE)
+                </p>
+
+                <div className="pt-4 border-t border-white/5 space-y-2.5">
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Medal size={14} className="text-amber-400" />
+                    Academic Records (CBSE Board):
+                  </p>
+                  
+                  <div className="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                    <span className="text-xs text-gray-300 font-medium">Matriculation (Class X) - 2022 • CBSE</span>
+                    <span className="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                      92%
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                    <span className="text-xs text-gray-300 font-medium">Intermediate (Class XII - PCM) - 2024 • CBSE</span>
+                    <span className="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/30">
+                      84%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 3. Competitive Exams & Olympiads */}
+            <motion.div
+              className="p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-emerald-500/30 transition-all duration-300 backdrop-blur-sm shadow-lg flex flex-col justify-between"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                    <Trophy size={22} />
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+                    <Award size={12} className="text-emerald-400" />
+                    National & Int'l
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-white mb-1">
+                  Competitive & Olympiads
+                </h3>
+
+                <p className="text-xs text-gray-400 mb-5">
+                  National Engineering Entrances & Mathematics Recognition
+                </p>
+
+                <div className="pt-4 border-t border-white/5 space-y-2.5">
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Target size={14} className="text-emerald-400" />
+                    Key Milestones:
+                  </p>
+
+                  <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                    <span className="text-xs text-gray-200 font-medium flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                      JEE Mains
+                    </span>
+                    <span className="text-xs font-bold font-mono px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 shrink-0">
+                      Qualified
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                    <span className="text-xs text-gray-200 font-medium flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                      IMU-CET
+                    </span>
+                    <span className="text-xs font-bold font-mono px-2.5 py-0.5 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/30 shrink-0">
+                      Qualified
+                    </span>
+                  </div>
+
+                  <div className="p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                    <div className="flex items-center justify-between gap-2 mb-1">
+                      <span className="text-xs text-gray-200 font-medium flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                        IMO (Maths Olympiad)
+                      </span>
+                      <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                        <span className="text-xs">🥉</span>
+                        <span className="flex flex-col text-left leading-tight">
+                          <span>Bronze</span>
+                          <span>Medal</span>
+                        </span>
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-gray-400 pl-3.5">
+                      International Mathematics Olympiad by SOF
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
 
           <motion.h2
             className="text-3xl md:text-4xl font-bold mb-6"

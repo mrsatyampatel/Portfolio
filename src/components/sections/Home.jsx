@@ -28,8 +28,7 @@ const topCertificates = [
     { title: "Smart India Hackathon 2025 (Participant)", img: "/certificates/SIH-2025-SRMU.png", alt: "Smart India Hackathon 2025 Participation Certificate - Satyam Patel" },
     { title: "Hackfest Lucknow 2026", img: "/certificates/certificate-hackfest-srmcem.jpg", alt: "Hackfest Lucknow Participation Certificate - GDGoC SRMCEM x MLH - Satyam Patel" },
     { title: "Hackfest 2026 (Craftora & OSEN)", img: "/certificates/certificate-hackfest-craftora.jpg", alt: "Hackfest 2026 Participation Certificate - Craftora & OSEN - Satyam Patel" },
-    { title: "Viveka 5.0 (Boat Race)", img: "/certificates/Viveka_5_Boat_Race_Certificate.pdf", alt: "Viveka 5.0 Techfest Participation Certificate - Satyam Patel" },
-    { title: "Harmony'26 Technical Events", img: "/certificates/Harmony_26_Volunteer_Certificate.pdf", alt: "Harmony'26 Technical Events Volunteer Certificate - Satyam Patel" },
+    { title: "Harmony'26 Technical Events", img: "/certificates/Harmony_26_Volunteer.jpg", alt: "Harmony'26 Technical Events Volunteer Certificate - Satyam Patel" },
 ];
 
 export default function Home() {

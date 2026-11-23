@@ -6,12 +6,14 @@ import CertificateSection from './components/sections/CertificateSection';
 import ConnectHub from './components/sections/ConnectHub';
 import Coding from './components/sections/Coding';
 import NotFound from './components/sections/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/sections/Layout';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
