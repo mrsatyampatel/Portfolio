@@ -109,7 +109,7 @@ export default function Achievements() {
 
                   {/* Prominent Eye-Catching Highlight Badges */}
                   {item.keyPoints && item.keyPoints.length > 0 && (
-                    <div className="my-4 space-y-2">
+                    <div className="mt-4 mb-2 space-y-2.5">
                       {item.keyPoints.map((kp, idx) => (
                         <div
                           key={idx}
@@ -124,11 +124,6 @@ export default function Achievements() {
                       ))}
                     </div>
                   )}
-
-                  {/* Description */}
-                  <p className="text-sm text-gray-300 leading-relaxed mb-6">
-                    {item.description}
-                  </p>
                 </div>
 
                 {/* Footer link to certificate */}
