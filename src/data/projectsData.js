@@ -1,6 +1,13 @@
 // Centralized projects data - Satyam Patel
 const projects = [
   {
+    title: 'Developer Portfolio',
+    description: 'A responsive, modern, performance-driven personal developer portfolio built with React, Vite, and Tailwind CSS. Features glassmorphism UI, live GitHub contributions, interactive certificate showcase, and full SEO optimization.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    github: 'https://github.com/mrsatyampatel/Portfolio',
+    live: '/',
+  },
+  {
     title: 'Alumni Connect (SIH 2025)',
     description: 'A university alumni engagement platform developed for Smart India Hackathon 2025. Connects alumni, students, and faculty for mentorship, career networking, and institutional growth.',
     tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],

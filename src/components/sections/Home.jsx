@@ -12,7 +12,7 @@ import GitHubWall from './GitHubWall';
 
 /* ─── Stats data ────────────────────────────────────────────── */
 const initialStats = [
-    { value: "3+", label: "Featured Projects" },
+    { value: "4+", label: "Featured Projects" },
     { value: "8+", label: "Certifications & Hackathons" },
     { value: "SRMU", label: "B.Tech CSE (AI/ML)" },
     { value: "...", label: "Total Contributions" },
