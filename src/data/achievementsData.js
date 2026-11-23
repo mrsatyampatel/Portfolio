@@ -6,13 +6,13 @@
 export const achievements = [
   {
     id: "sih-coord",
-    title: "Smart India Hackathon 2026",
-    role: "Official Event Coordinator & Participant",
+    title: "Smart India Hackathon (SIH 2025 & 2026)",
+    role: "Official Event Coordinator (2026) & Two-Time Qualifier",
     organization: "Ministry of Education (MoE), AICTE & SRMU",
     category: "Leadership & National Hackathon",
-    date: "Sept 2026",
-    highlight: "National Initiative",
-    description: "Appointed as Event Coordinator for the internal round of SIH 2026 at SRMU. Mentored teams and also qualified the internal round with an innovative tech solution.",
+    date: "2025 – 2026",
+    highlight: "Back-to-Back Qualified",
+    description: "Successfully cleared university internal rounds back-to-back in SIH 2025 and SIH 2026 with innovative solutions. Also appointed as the Official Event Coordinator for SIH 2026 at SRMU leading management and team mentorship.",
     certificateUrl: "/certificates/SIH-2026-Coordinator.jpg",
     stats: "Coordinator & Participant",
     badgeTheme: "blue",
