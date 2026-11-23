@@ -11,8 +11,11 @@ Passionate about frontend development, MERN stack, Data Structures & Algorithms 
 - [Projects](/projects): Full collection of projects (Alumni Connect SIH 2025, Gas Alert System, Mangifera Shield)
 - [Certificates](/certificates): SIH 2025, MLH Hackfest, Craftora, and SRMU Techfest certificates
 - [Contact](/contact): Get in touch via the contact form
-- [All Links / Connect Hub](/connect): GitHub, LinkedIn, LeetCode, and email
+- [Live Portfolio](https://satyamportfolio-piii.vercel.app): Official deployed site
+- [All Links / Connect Hub](/connect): GitHub, LinkedIn, LeetCode, X, and email
 - [GitHub](https://github.com/mrsatyampatel): Project repositories and code
 - [LinkedIn](https://www.linkedin.com/in/satyam-patel-221a69370): Professional LinkedIn profile
 - [LeetCode](https://leetcode.com/u/heyypatel/): Coding profile
-- [Email](mailto:patelsatyam1735@gmail.com): Direct contact
+- [GeeksforGeeks](https://www.geeksforgeeks.org/profile/heyypatel): Coding profile
+- [X / Twitter](https://x.com/_heyypatel): Social profile
+- [Email](mailto:chandrayan2k23@gmail.com): Direct contact

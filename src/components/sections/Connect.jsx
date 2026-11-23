@@ -21,7 +21,7 @@ export default function RealConnect() {
           >
             {/* Call Button */}
             <a
-              href="mailto:patelsatyam1735@gmail.com"
+              href="mailto:chandrayan2k23@gmail.com"
               aria-label="Email Satyam Patel"
               className="w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full shadow-lg flex items-center justify-center text-white"
             >
@@ -30,7 +30,7 @@ export default function RealConnect() {
 
             {/* Message Button */}
             <a
-              href="mailto:patelsatyam1735@gmail.com"
+              href="mailto:chandrayan2k23@gmail.com"
               aria-label="Message Satyam Patel"
               className="w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg flex items-center justify-center text-white"
             >
@@ -39,7 +39,7 @@ export default function RealConnect() {
 
             {/* WhatsApp Button */}
             <a
-              href="mailto:patelsatyam1735@gmail.com"
+              href="mailto:chandrayan2k23@gmail.com"
               aria-label="Connect with Satyam Patel"
               className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg flex items-center justify-center text-white"
             >
